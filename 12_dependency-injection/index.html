@@ -6,16 +6,18 @@
 </head>
 <body>
 
+  <div ng-controller="MyController">
+    {{perro}}
+  </div>
+
 
   <script>
-    // TODO: this does not currently work as described
-    // Try this out in your console:
-    // var injector = angular.injector(['myApp']);
-    // injector.annotate('MyController');
     var app = angular.module('myApp', ['myApp.controllers']);
 
     angular.module('myApp.controllers', [])
-    .controller('MyController', ['$scope', function($scope) {}]);
+    .controller('MyController', ['$scope', function($scope) {
+      $scope.perro = 'Guau';
+    }]);
   </script>
 
 </body>
